@@ -6,8 +6,6 @@ import img3 from '/src/assets/main/3.png'
 import img4 from '/src/assets/main/4.png'
 import img5 from '/src/assets/main/5.png'
 
-
-// Add your actual image filenames here
 const SLIDES = [
   { src: img1, alt: 'Гостиница Релиз, вид на отель ночью', priority: true },
   { src: img2, alt: 'Гостиница Релиз, вид на отель днем' },
