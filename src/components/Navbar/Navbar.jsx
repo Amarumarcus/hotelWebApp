@@ -35,7 +35,7 @@ export default function Navbar() {
             {label}
           </a>
         ))}
-        <a href="tel: +79111536774" className="navbar__cta" onClick={handleLinkClick}>
+        <a href="tel: +79006445001" className="navbar__cta" onClick={handleLinkClick}>
           Забронировать
         </a>
       </nav>

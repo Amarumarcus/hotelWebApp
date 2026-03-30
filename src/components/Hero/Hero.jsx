@@ -73,7 +73,7 @@ export default function Hero() {
         </p>
         <div className="hero__actions">
           <a href="#about" className="hero__btn hero__btn--primary">Узнать больше</a>
-          <a href="tel:+79999999999" className="hero__btn hero__btn--outline">Забронировать</a>
+          <a href="tel:+79006445001" className="hero__btn hero__btn--outline">Забронировать</a>
         </div>
       </div>
 

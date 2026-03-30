@@ -1,7 +1,7 @@
 import './Footer.css'
 
 const CONTACTS = [
-  { icon: '📞', label: 'Телефон', value: '+7 (999) 999-99-99', href: 'tel:+79999999999' },
+  { icon: '📞', label: 'Телефон', value: '+7 (900) 644-50-01', href: 'tel:+79006445001' },
   { icon: '📧', label: 'Email', value: 'info@sukhumhouse.ru', href: 'mailto:info@sukhumhouse.ru' },
   { icon: '📍', label: 'Адрес', value: 'Абхазия, г. Пицунда', href: '#map' },
   { icon: '⏰', label: 'Заезд / Выезд', value: 'с 14:00 / до 12:00', href: null },
@@ -11,7 +11,7 @@ const SOCIAL = [
   { label: 'ВКонтакте', href: 'https://vk.com' },
   { label: 'Telegram', href: 'https://t.me' },
   { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'WhatsApp', href: 'https://wa.me/79999999999' },
+  { label: 'WhatsApp', href: 'https://wa.me/+79006445001' },
 ]
 
 export default function Footer() {
@@ -60,7 +60,7 @@ export default function Footer() {
           <p className="footer__booking-text">
             Свяжитесь с нами по телефону или напишите в мессенджер — мы ответим в течение нескольких минут.
           </p>
-          <a href="tel:+79999999999" className="footer__cta">
+          <a href="tel:+79006445001" className="footer__cta">
             Забронировать номер
           </a>
           <p className="footer__booking-note">
