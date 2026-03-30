@@ -66,7 +66,7 @@ export default function Hero() {
         <p className="hero__eyebrow">Абхазия · Пицунда</p>
         <h1 className="hero__title">
           Релиз
-          <span className="hero__title-sub">Boutique Hotel</span>
+          <span className="hero__title-sub">Мини-отель</span>
         </h1>
         <p className="hero__tagline">
           Уютный гостевой дом у моря, окружённый зеленью и горным воздухом

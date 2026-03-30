@@ -18,11 +18,10 @@ export default function Footer() {
   return (
     <footer id="footer" className="footer">
       <div className="footer__inner">
-
         <div className="footer__brand">
           <div className="footer__logo">
             <span className="footer__logo-main">Релиз</span>
-            <span className="footer__logo-sub">Boutique Hotel · Абхазия</span>
+            <span className="footer__logo-sub">Мини-отель · Абхазия</span>
           </div>
           <p className="footer__tagline">
             Уютный гостевой дом у самого Чёрного моря.<br />

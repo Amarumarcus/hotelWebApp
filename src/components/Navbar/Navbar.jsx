@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: 'Галерея', href: '#galleries' },
   { label: 'Карта', href: '#map' },
   { label: 'Контакты', href: '#footer' },
+  { label: 'Скачать прайс', href: 'https://reliz-hotel.netlify.app/Отель_Релиз_прайз_2026.png'}
 ]
 
 export default function Navbar() {
@@ -25,7 +26,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <a href="#hero" className="navbar__logo">
         <span className="navbar__logo-main">Релиз</span>
-        <span className="navbar__logo-sub">Boutique Hotel</span>
+        <span className="navbar__logo-sub">Мини-отель</span>
       </a>
 
       <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>
