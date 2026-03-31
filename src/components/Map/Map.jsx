@@ -21,8 +21,7 @@ export default function Map() {
           </h4>
           <div className="divider" />
           <p className="map-section__address">
-            Абхазия, г. Пицунда<br />
-            <span>Ориентир: парк с мини-зоопарком, выход к морю</span>
+            Абхазия, г. Пицунда
           </p>
         </div>
 

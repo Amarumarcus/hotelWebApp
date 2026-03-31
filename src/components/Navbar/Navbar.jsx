@@ -7,20 +7,20 @@ const NAV_LINKS = [
   { label: 'Галерея', href: '#galleries' },
   { label: 'Карта', href: '#map' },
   { label: 'Контакты', href: '#footer' },
-  { label: 'Скачать прайс', href: 'https://reliz-hotel.netlify.app/Отель_Релиз_прайз_2026.png'}
+  { label: 'Скачать прайс', href: 'https://reliz-hotel.netlify.app/Отель Релиз_прайc_2026.png'}
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const handleLinkClick = () => setMenuOpen(false)
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  const handleLinkClick = () => setMenuOpen(false)
 
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>

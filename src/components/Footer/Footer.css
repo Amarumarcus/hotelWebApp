@@ -48,6 +48,32 @@
   gap: 0.6rem;
 }
 
+.footer__oferta-text {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.footer__oferta-button {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius);
+  transition: background var(--transition), transform var(--transition);
+  margin-bottom: 0.8rem;
+}
+
+.footer__oferta-button:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-1px);
+}
+
 .footer__social-link {
   font-size: 0.7rem;
   font-weight: 500;
@@ -58,6 +84,7 @@
   padding: 0.4rem 0.9rem;
   border-radius: 20px;
   transition: color var(--transition), border-color var(--transition);
+  margin-bottom: 1.5rem;
 }
 
 .footer__social-link:hover {

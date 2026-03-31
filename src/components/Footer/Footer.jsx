@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import Oferta from '../Oferta/Oferta'
 import './Footer.css'
 
 const CONTACTS = [
@@ -13,8 +15,11 @@ const SOCIAL = [
   { label: 'Instagram', href: 'https://instagram.com' },
   { label: 'WhatsApp', href: 'https://wa.me/+79006445001' },
 ]
-
+  
 export default function Footer() {
+  const [ofertaOpen, setOfertaOpen] = useState(false)
+  const handleOfertaClick = () => setOfertaOpen(false)
+
   return (
     <footer id="footer" className="footer">
       <div className="footer__inner">
@@ -24,8 +29,7 @@ export default function Footer() {
             <span className="footer__logo-sub">Мини-отель · Абхазия</span>
           </div>
           <p className="footer__tagline">
-            Уютный гостевой дом у самого Чёрного моря.<br />
-            Отдыхайте, как дома.
+            Уютный гостевой дом у самого Чёрного моря.
           </p>
           <div className="footer__social">
             {SOCIAL.map(({ label, href }) => (
@@ -33,6 +37,14 @@ export default function Footer() {
                 {label}
               </a>
             ))}
+          </div>
+          <div>
+            <p className="footer__oferta-text">
+              Минимальный срок проживания 3 ночи. Бесплатная отмена за 24 часа.
+            </p>
+            <button className="footer__oferta-button" onClick={() => setOfertaOpen(v => !v)} aria-label="Открыть публичную оферту">
+              Публичная оферта
+            </button>
           </div>
         </div>
 
@@ -74,6 +86,7 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Релиз. Все права защищены.</p>
         <p>Абхазия, г. Пицунда</p>
       </div>
+      <Oferta ofertaOpen={ofertaOpen} handleOfertaClick={handleOfertaClick} />
     </footer>
   )
 }
