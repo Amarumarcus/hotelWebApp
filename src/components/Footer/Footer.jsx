@@ -75,9 +75,6 @@ export default function Footer() {
           <a href="tel:+79006445001" className="footer__cta">
             Забронировать номер
           </a>
-          <p className="footer__booking-note">
-            Бесплатная отмена до 24 часов
-          </p>
         </div>
 
       </div>
