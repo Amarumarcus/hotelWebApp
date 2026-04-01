@@ -7,10 +7,10 @@ import img4 from '/src/assets/main/4.png'
 import img5 from '/src/assets/main/5.png'
 
 const SLIDES = [
-  { src: img1, alt: 'Гостиница Релиз, вид на отель ночью', priority: true },
-  { src: img2, alt: 'Гостиница Релиз, вид на отель днем' },
+  { src: img1, alt: 'Гостиница Релиз, вид на гостиницу ночью', priority: true },
+  { src: img2, alt: 'Гостиница Релиз, вид на гостиницу днем' },
   { src: img3, alt: 'Гостиница Релиз, вид на номер' },
-  { src: img4, alt: 'Гостиница Релиз, территория отеля, сад и пруд' },
+  { src: img4, alt: 'Гостиница Релиз, территория гостиницы, сад и пруд' },
   { src: img5, alt: 'Гостиница Релиз, в номере вид на кровать' }
 ]
 
@@ -66,14 +66,14 @@ export default function Hero() {
         <p className="hero__eyebrow">Абхазия · Пицунда</p>
         <h1 className="hero__title">
           Релиз
-          <span className="hero__title-sub">Мини-отель</span>
+          <span className="hero__title-sub">Гостиница</span>
         </h1>
         <p className="hero__tagline">
-          Уютный гостевой дом у моря, окружённый зеленью и горным воздухом
+          Уютная гостиница у моря, окружённая зеленью и горным воздухом
         </p>
         <div className="hero__actions">
           <a href="#about" className="hero__btn hero__btn--primary">Узнать больше</a>
-          <a href="tel:+79006445001" className="hero__btn hero__btn--outline">Забронировать</a>
+          <a href="#contact" className="hero__btn hero__btn--outline">Забронировать</a>
         </div>
       </div>
 

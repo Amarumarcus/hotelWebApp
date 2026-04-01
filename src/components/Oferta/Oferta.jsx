@@ -14,7 +14,7 @@ export default function Oferta({ofertaOpen, handleOfertaClick}) {
                 Для подтверждения бронирования требуется предоплата за первые сутки проживания.<br />
                 При отмене бронирования не позднее чем за 24 часа до даты заезда предоплата возвращается в полном объёме.<br />
               </p>
-              <a href="https://reliz-hotel.netlify.app/Отель Релиз_прайc_2026.png" className="footer__oferta-link">Скачать прайс</a>
+              <a href="https://reliz-hotel.netlify.app/Гостиница Релиз_прайc_2026.png" className="footer__oferta-link">Скачать прайс</a>
             </div>
           </div>
       </div>

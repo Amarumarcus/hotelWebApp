@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { label: 'Галерея', href: '#galleries' },
   { label: 'Карта', href: '#map' },
   { label: 'Контакты', href: '#footer' },
-  { label: 'Скачать прайс', href: 'https://reliz-hotel.netlify.app/Отель Релиз_прайc_2026.png'}
+  { label: 'Скачать прайс', href: 'https://reliz-hotel.netlify.app/Гостиница Релиз_прайc_2026.png'}
 ]
 
 export default function Navbar() {
@@ -26,7 +26,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <a href="#hero" className="navbar__logo">
         <span className="navbar__logo-main">Релиз</span>
-        <span className="navbar__logo-sub">Мини-отель</span>
+        <span className="navbar__logo-sub">Гостиница</span>
       </a>
 
       <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>
@@ -35,7 +35,7 @@ export default function Navbar() {
             {label}
           </a>
         ))}
-        <a href="tel: +79006445001" className="navbar__cta" onClick={handleLinkClick}>
+        <a href="#contact" className="navbar__cta" onClick={handleLinkClick}>
           Забронировать
         </a>
       </nav>

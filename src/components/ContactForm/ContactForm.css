@@ -1,0 +1,367 @@
+/* ============================================================
+   Contact Section
+   ============================================================ */
+.contact-section {
+  padding: var(--section-padding);
+  background: var(--color-bg);
+}
+
+.contact-section__inner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-section__header {
+  text-align: center;
+}
+
+.contact-section__subtitle {
+  margin-top: 1rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.contact-form__value {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.contact-form__value--link {
+  transition: color var(--transition);
+}
+
+.contact-form__value--link:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================================
+   Card wrapper
+   ============================================================ */
+.contact-section__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: clamp(0.5rem, 5vw, 1.5rem);
+}
+
+/* ============================================================
+   Form layout
+   ============================================================ */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form__group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form__legend {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.contact-form__required-note {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  text-transform: none;
+  margin-left: 0.5rem;
+}
+
+/* ============================================================
+   Field
+   ============================================================ */
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-form__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.contact-form__optional {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-muted);
+  opacity: 0.7;
+}
+
+.contact-form__asterisk {
+  color: var(--color-accent);
+  margin-left: 2px;
+}
+
+/* ============================================================
+   Input / Textarea
+   ============================================================ */
+.contact-form__input {
+  width: 100%;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact-form__input::placeholder {
+  color: var(--color-muted);
+  opacity: 0.6;
+}
+
+.contact-form__input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.12);
+}
+
+.contact-form__input--error {
+  border-color: #c0504d;
+}
+
+.contact-form__input--error:focus {
+  box-shadow: 0 0 0 3px rgba(192, 80, 77, 0.15);
+}
+
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Error message
+   ============================================================ */
+.contact-form__error {
+  font-size: 0.75rem;
+  color: #e07070;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   Submit button
+   ============================================================ */
+.contact-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), opacity var(--transition);
+  font-family: var(--font-body);
+}
+
+.contact-form__submit:hover:not(:disabled) {
+  background: var(--color-accent-light);
+  transform: translateY(-1px);
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   Loading spinner
+   ============================================================ */
+.contact-form__spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(14, 13, 11, 0.3);
+  border-top-color: var(--color-bg);
+  border-radius: 50%;
+  animation: cf-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes cf-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   Success state
+   ============================================================ */
+.contact-form__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  animation: cf-fadeIn 0.5s ease;
+}
+
+@keyframes cf-fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.contact-form__success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form__success-title {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.contact-form__success-text {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  max-width: 380px;
+  line-height: 1.7;
+}
+
+.contact-form__submit--success {
+  align-self: center;
+}
+
+/* ============================================================
+   Consent checkbox
+   ============================================================ */
+.contact-form__consent-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-form__consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide the native checkbox visually */
+.contact-form__consent-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Custom checkbox box */
+.contact-form__consent-box {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: var(--color-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+/* Checked state */
+.contact-form__consent-input:checked + .contact-form__consent-box {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.contact-form__consent-input:checked + .contact-form__consent-box::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: 2px solid var(--color-bg);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+/* Focus ring */
+.contact-form__consent-input:focus-visible + .contact-form__consent-box {
+  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.25);
+  border-color: var(--color-accent);
+}
+
+.contact-form__consent-text {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.contact-form__consent-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ============================================================
+   Send error
+   ============================================================ */
+.contact-form__send-error {
+  font-size: 0.82rem;
+  color: #e07070;
+  background: rgba(192, 80, 77, 0.1);
+  border: 1px solid rgba(192, 80, 77, 0.25);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 480px) {
+  .contact-form__submit {
+    align-self: stretch;
+  }
+}

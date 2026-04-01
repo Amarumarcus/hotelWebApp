@@ -4,7 +4,7 @@ import './Footer.css'
 
 const CONTACTS = [
   { icon: '📞', label: 'Телефон', value: '+7 (900) 644-50-01', href: 'tel:+79006445001' },
-  { icon: '📧', label: 'Email', value: 'info@sukhumhouse.ru', href: 'mailto:info@sukhumhouse.ru' },
+  { icon: '📧', label: 'Email', value: 'reliz.hotel@gmail.com', href: 'mailto:reliz.hotel@gmail.com' },
   { icon: '📍', label: 'Адрес', value: 'Абхазия, г. Пицунда', href: '#map' },
   { icon: '⏰', label: 'Заезд / Выезд', value: 'с 14:00 / до 12:00', href: null },
 ]
@@ -26,10 +26,10 @@ export default function Footer() {
         <div className="footer__brand">
           <div className="footer__logo">
             <span className="footer__logo-main">Релиз</span>
-            <span className="footer__logo-sub">Мини-отель · Абхазия</span>
+            <span className="footer__logo-sub">Гостиница · Абхазия</span>
           </div>
           <p className="footer__tagline">
-            Уютный гостевой дом у самого Чёрного моря.
+            Уютная гостиница у Чёрного моря.
           </p>
           <div className="footer__social">
             {SOCIAL.map(({ label, href }) => (
@@ -72,7 +72,7 @@ export default function Footer() {
           <p className="footer__booking-text">
             Свяжитесь с нами по телефону или напишите в мессенджер — мы ответим в течение нескольких минут.
           </p>
-          <a href="tel:+79006445001" className="footer__cta">
+          <a href="#contact" className="footer__cta">
             Забронировать номер
           </a>
         </div>

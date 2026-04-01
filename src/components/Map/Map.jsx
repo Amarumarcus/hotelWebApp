@@ -28,7 +28,7 @@ export default function Map() {
         <div className="map-section__map">
           <iframe
             src={MAP_URL}
-            title="Расположение отеля Релиз"
+            title="Расположение гостиницы Релиз"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
