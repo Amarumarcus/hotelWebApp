@@ -84,19 +84,32 @@
   background: var(--color-surface-2);
 }
 
-@media (max-width: 767px) {
-  .carousel__track { aspect-ratio: 4 / 3; }
+video {
+  aspect-ratio: 16 / 9;
+  background-color: #000;
 }
+
+@media (max-width: 767px) {
+  .carousel__track { aspect-ratio: 3 / 4; }
+  video {
+    aspect-ratio: 3 / 4;
+  }
+}
+
 
 .carousel__slide {
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .carousel__slide--active {
   opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
 }
 
 .carousel__slide img {

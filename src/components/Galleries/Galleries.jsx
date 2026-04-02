@@ -1,14 +1,16 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import './Galleries.css'
 
-const gallery = import.meta.glob('/src/assets/gallery/*.png', { eager: true });
-const kitchen = import.meta.glob('/src/assets/kitchen/*.png', { eager: true });
-const nearby = import.meta.glob('/src/assets/nearby/*.png', { eager: true });
+const gallery = import.meta.glob('/src/assets/gallery/*.webp', { eager: true });
+const kitchen = import.meta.glob('/src/assets/kitchen/*.webp', { eager: true });
+const nearby = import.meta.glob('/src/assets/nearby/*.webp', { eager: true });
+const video = import.meta.glob('/src/assets/video/*.mp4', { eager: true, query: '?url', import: 'default' });
 
-function makeSlides(imGobj) {
-  return Object.values(imGobj).map((img, i) => ({
-    src: img.default,
-    alt: `Фото ${i + 1}`,
+function makeSlides(imGobj, type) {
+  return Object.values(imGobj).map((mod, i) => ({
+    src: type === 'video' ? mod : mod.default,
+    alt: type === 'video' ? `Видео ${i + 1}` : `Фото ${i + 1}`,
+    type,
   }))
 }
 
@@ -18,24 +20,30 @@ const GALLERIES = [
     id: 'main',
     label: 'Галерея',
     title: 'Номера и\u00a0<em>территория</em>',
-    slides: makeSlides(gallery),
+    slides: makeSlides(gallery, 'img'),
   },
   {
     id: 'kitchen',
     label: 'Кухня',
     title: 'Общая\u00a0<em>кухня</em>',
-    slides: makeSlides(kitchen),
+    slides: makeSlides(kitchen, 'img'),
   },
   {
     id: 'nearby',
     label: 'Окрестности',
     title: 'Парк\u00a0и\u00a0<em>море</em>',
-    slides: makeSlides(nearby),
+    slides: makeSlides(nearby, 'img'),
+  },
+  {
+    id: 'video',
+    label: 'Видео',
+    title: 'Видео',
+    slides: makeSlides(video, 'video'),
   },
 ]
 
 /* ─── Single carousel ─── */
-function Carousel({ slides }) {
+function Carousel({ slides, id }) {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(null)
   const touchStart = useRef(null)
@@ -81,7 +89,22 @@ function Carousel({ slides }) {
             className={`carousel__slide ${i === current ? 'carousel__slide--active' : ''}`}
             aria-hidden={i !== current}
           >
-            <img src={slide.src} alt={slide.alt} loading="lazy" />
+            {id === 'video' ? (
+                <div className="video-wrapper">
+                  <video 
+                    width="100%" 
+                    controls 
+                    preload="metadata"
+                    playsInline
+                    muted
+                  >
+                    <source src={slide.src} type="video/mp4" />
+                    Ваш браузер не поддерживает встроенные видео.
+                  </video>
+                </div>
+              ) : (
+                <img src={slide.src} alt={slide.alt} loading="lazy" />
+              )}
           </div>
         ))}
       </div>
@@ -114,7 +137,11 @@ function Carousel({ slides }) {
             onClick={() => setCurrent(i)}
             aria-label={`Слайд ${i + 1}`}
           >
-            <img src={slide.src} alt={slide.alt} loading="lazy" />
+            {slide.type === 'video' ? (
+              <span className="carousel__thumb-video-icon" aria-hidden="true">▶</span>
+            ) : (
+              <img src={slide.src} alt={slide.alt} loading="lazy" />
+            )}
           </button>
         ))}
       </div>
@@ -161,7 +188,7 @@ export default function Galleries() {
               dangerouslySetInnerHTML={{ __html: active.title }}
             />
           </div>
-          <Carousel key={activeTab} slides={active.slides} />
+          <Carousel key={activeTab} slides={active.slides} id={active.id} />
         </div>
 
       </div>

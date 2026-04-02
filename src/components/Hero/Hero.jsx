@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 import './Hero.css'
-import img1 from '/src/assets/main/1.png'
-import img2 from '/src/assets/main/2.png'
-import img3 from '/src/assets/main/3.png'
-import img4 from '/src/assets/main/4.png'
-import img5 from '/src/assets/main/5.png'
+import img1 from '/src/assets/main/01.webp'
+import img2 from '/src/assets/main/02.webp'
+import img3 from '/src/assets/main/03.webp'
+import img4 from '/src/assets/main/04.webp'
+import img5 from '/src/assets/main/05.webp'
 
 const SLIDES = [
   { src: img1, alt: 'Гостиница Релиз, вид на гостиницу ночью', priority: true },
@@ -13,6 +13,7 @@ const SLIDES = [
   { src: img4, alt: 'Гостиница Релиз, территория гостиницы, сад и пруд' },
   { src: img5, alt: 'Гостиница Релиз, в номере вид на кровать' }
 ]
+
 
 const INTERVAL = 4000
 

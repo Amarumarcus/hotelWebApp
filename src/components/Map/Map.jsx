@@ -1,12 +1,7 @@
 import './Map.css'
 
 const MAP_URL =
-  'https://yandex.ru/map-widget/v1/' +
-  '?ll=40.294670%2C43.180152' +
-  '&z=15' +
-  '&pt=40.294670%2C43.180152%2Cpm2rdm' +
-  '&l=map' +
-  '&lang=ru_RU'
+  'https://yandex.ru/map-widget/v1/?um=constructor%3A5c5b181aa775502b20833429ebd17d6d460d2bc9cc6bff51f0978103291d0c49&source=constructor'
 
 export default function Map() {
 
@@ -31,7 +26,8 @@ export default function Map() {
             title="Расположение гостиницы Релиз"
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            width="100%"
+            height="400"
           />
         </div>
 
