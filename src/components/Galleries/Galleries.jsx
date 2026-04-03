@@ -19,19 +19,19 @@ const GALLERIES = [
   {
     id: 'main',
     label: 'Галерея',
-    title: 'Номера и\u00a0<em>территория</em>',
+    title: 'Номера\u00a0и\u00a0<em>территория</em>',
     slides: makeSlides(gallery, 'img'),
   },
   {
     id: 'kitchen',
     label: 'Кухня',
-    title: 'Общая\u00a0<em>кухня</em>',
+    title: 'Общая\u00a0кухня\u00a0и\u00a0<em>мангальная\u00a0зона</em>',
     slides: makeSlides(kitchen, 'img'),
   },
   {
     id: 'nearby',
     label: 'Окрестности',
-    title: 'Парк\u00a0и\u00a0<em>море</em>',
+    title: 'Парк,\u00a0море\u00a0и\u00a0<em>рестораны</em>',
     slides: makeSlides(nearby, 'img'),
   },
   {

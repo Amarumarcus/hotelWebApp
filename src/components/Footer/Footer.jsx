@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="footer__oferta-text">
-              Минимальный срок проживания 3 ночи. Бесплатная отмена за 24 часа.
+              Минимальный срок проживания 3 ночи.
             </p>
             <button className="footer__oferta-button" onClick={() => setOfertaOpen(v => !v)} aria-label="Открыть публичную оферту">
               Публичная оферта
