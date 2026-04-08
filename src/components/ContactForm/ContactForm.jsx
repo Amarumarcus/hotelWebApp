@@ -1,13 +1,6 @@
 import { useState } from 'react'
-import emailjs from '@emailjs/browser'
 import './ContactForm.css'
-
-const SERVICE_ID  = 'service_m2bvjv1'
-const TEMPLATE_ID = 'template_8rvfuno'
-const PUBLIC_KEY  = 'olYZfcXchPkZsFeju'
-
-// Initialize EmailJS once at module level (required for v4)
-emailjs.init({ publicKey: PUBLIC_KEY })
+import PrivacyPolicy from '../PrivacyPolicy/PrivacyPolicy'
 
 const INITIAL_STATE = {
   name: '',
@@ -37,6 +30,9 @@ export default function ContactForm() {
   const [errors, setErrors]   = useState(INITIAL_ERRORS)
   const [touched, setTouched] = useState({})
   const [status, setStatus]   = useState('idle') // 'idle' | 'loading' | 'success' | 'error'
+
+  const [privacyPolicyOpen, setPrivacyPolicyOpen] = useState(false)
+  const handlePrivacyPolicyClick = () => setPrivacyPolicyOpen(false)
 
   function validate(data, consentChecked) {
     const errs = { name: '', phone: '', email: '', consent: '' }
@@ -86,19 +82,24 @@ export default function ContactForm() {
 
     setStatus('loading')
     try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name: fields.name,
-          phone:     fields.phone,
-          email:     fields.email,
-          booking:   fields.booking || 'Не указано',
-        },
-      )
+      const response = await fetch('http://localhost:3001/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: fields.name,
+          phone: fields.phone,
+          email: fields.email,
+          booking: fields.booking,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error(`Ошибка сервера: ${response.status}`)
+      }
+
       setStatus('success')
     } catch (err) {
-      console.error('EmailJS error:', err)
+      console.error('Ошибка отправки:', err)
       setStatus('error')
     }
   }
@@ -258,13 +259,14 @@ export default function ContactForm() {
                   <span className="contact-form__consent-box" aria-hidden="true" />
                   <span className="contact-form__consent-text">
                     Я согласен(а) на{' '}
-                    <span className="contact-form__consent-link">обработку персональных данных</span>
+                    <span className="contact-form__consent-link" onClick={() => setPrivacyPolicyOpen(v => !v)}>обработку персональных данных и трансграничную передачу данных</span>
                     <span className="contact-form__asterisk" aria-hidden="true"> *</span>
                   </span>
                 </label>
                 {errors.consent && touched.consent && (
                   <span id="error-consent" className="contact-form__error" role="alert">{errors.consent}</span>
                 )}
+                <PrivacyPolicy privacyPolicyOpen={privacyPolicyOpen} handlePrivacyPolicyClick={handlePrivacyPolicyClick} />
               </div>
 
               {/* Send error */}

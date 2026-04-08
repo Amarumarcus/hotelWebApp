@@ -62,7 +62,7 @@
   margin-bottom: 1.5rem;
 }
 
-.footer__oferta-link:hover { 
+.footer__oferta-link:hover{ 
     color: var(--color-accent);
     border-color: var(--color-accent);
  }

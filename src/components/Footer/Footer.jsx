@@ -10,9 +10,9 @@ const CONTACTS = [
 ]
 
 const SOCIAL = [
-  { label: 'ВКонтакте', href: 'https://vk.com' },
+  { label: 'ВКонтакте', href: 'https://vk.ru/reliz.abkhazia' },
   { label: 'Telegram', href: 'https://t.me' },
-  { label: 'Instagram', href: 'https://instagram.com' },
+  { label: 'Instagram', href: 'https://www.instagram.com/reliz.abkhazia?igsh=MXh1MHdrZjUyb3pxcg==' },
   { label: 'WhatsApp', href: 'https://wa.me/+79006445001' },
 ]
   
@@ -42,9 +42,12 @@ export default function Footer() {
             <p className="footer__oferta-text">
               Минимальный срок проживания 3 ночи.
             </p>
-            <button className="footer__oferta-button" onClick={() => setOfertaOpen(v => !v)} aria-label="Открыть публичную оферту">
-              Публичная оферта
-            </button>
+            <div className="footer__oferta-privacy-buttons">
+              <button className="footer__oferta-button" onClick={() => setOfertaOpen(v => !v)} aria-label="Открыть публичную оферту">
+                Публичная оферта
+              </button>
+              <a href="https://reliz-hotel.netlify.app/Политика_конфиденциальности.pdf" className="footer__privacy-policy-link">Политика конфиденциальности</a>
+            </div>
           </div>
         </div>
 

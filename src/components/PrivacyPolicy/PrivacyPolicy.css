@@ -1,0 +1,141 @@
+.privacy-policy {
+    position: fixed;
+    top: 5vh;
+    left: 10vw;
+    right: 10vw;
+    bottom: 5vh;
+    background: #161411;
+    border: 1px solid var(--color-accent);
+    border-radius: 1rem;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity var(--transition), transform var(--transition);
+    padding: 2.5rem 1rem 1.5rem 2rem;
+    z-index: 1000;
+}
+
+.privacy-policy--open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.ContactForm__privacy-policy {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 1rem;
+    /* Custom scrollbar for policy */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-surface-2);
+}
+
+.ContactForm__privacy-policy::-webkit-scrollbar {
+    width: 6px;
+}
+.ContactForm__privacy-policy::-webkit-scrollbar-track {
+    background: var(--color-surface-2);
+    border-radius: 4px;
+}
+.ContactForm__privacy-policy::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent);
+    border-radius: 4px;
+}
+
+.ContactForm__privacy-policy-close {
+    position: absolute;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--color-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: 0.5rem;
+    right: 1rem;
+    transition: color var(--transition);
+}
+
+.ContactForm__privacy-policy-close:hover {
+    color: var(--color-white);
+}
+
+.ContactForm__privacy-policy-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.policy-container h2 {
+    font-size: 1.2rem;
+    color: var(--color-white);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.policy-container p, .policy-container li {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.policy-container ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.policy-data {
+    background: rgba(255,255,255, 0.03);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 2px solid var(--color-accent);
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.ContactForm__privacy-policy-link {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  transition: color var(--transition), border-color var(--transition);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.ContactForm__privacy-policy-link:hover { 
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+@media (max-width: 767px) {
+    .privacy-policy {
+        top: 2rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 2rem;
+        padding: 2.5rem 0.5rem 1rem 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .privacy-policy {
+    top: 4rem;
+    left: 4rem;
+    right: 4rem;
+    bottom: 4rem;
+  }
+}

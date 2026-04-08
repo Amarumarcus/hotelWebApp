@@ -55,7 +55,14 @@
   margin-bottom: 1.5rem;
 }
 
-.footer__oferta-button {
+.footer__oferta-privacy-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer__oferta-button,
+.footer__privacy-policy-link {
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 500;
@@ -66,10 +73,11 @@
   padding: 0.85rem 1.6rem;
   border-radius: var(--radius);
   transition: background var(--transition), transform var(--transition);
-  margin-bottom: 0.8rem;
+  text-align: center;
 }
 
-.footer__oferta-button:hover {
+.footer__oferta-button:hover,
+.footer__privacy-policy-link:hover {
   background: var(--color-accent-light);
   transform: translateY(-1px);
 }
