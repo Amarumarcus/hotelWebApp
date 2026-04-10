@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { label: 'Галерея', href: '#galleries' },
   { label: 'Карта', href: '#map' },
   { label: 'Контакты', href: '#footer' },
-  { label: 'Скачать прайс', href: 'https://reliz-hotel.netlify.app/Гостиница Релиз_прайc_2026.png'}
+  { label: 'Скачать прайс', href: 'https://reliz-hotel.ru/Гостиница Релиз_прайc_2026.png'}
 ]
 
 export default function Navbar() {

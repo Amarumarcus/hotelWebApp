@@ -5,7 +5,6 @@ import Galleries from './components/Galleries/Galleries'
 import Map from './components/Map/Map'
 import ContactForm from './components/ContactForm/ContactForm'
 import Footer from './components/Footer/Footer'
-import Oferta from './components/Oferta/Oferta'
 import './App.css'
 
 export default function App() {

@@ -13,7 +13,7 @@ export default function Oferta({ofertaOpen, handleOfertaClick}) {
                 Минимальный срок проживания — от 3 ночей.<br />
                 Для подтверждения бронирования требуется предоплата за первые сутки проживания.<br />
               </p>
-              <a href="https://reliz-hotel.netlify.app/Гостиница Релиз_прайc_2026.png" className="footer__oferta-link">Скачать прайс</a>
+              <a href="https://reliz-hotel.ru/Гостиница Релиз_прайc_2026.png" className="footer__oferta-link">Скачать прайс</a>
             </div>
           </div>
       </div>

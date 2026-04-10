@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://твои-домен.ru/sitemap.xml
+Sitemap: https://reliz-hotel.ru/sitemap.xml

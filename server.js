@@ -5,15 +5,17 @@ import cors from 'cors';
 const app = express();
 
 app.use(express.json());
-app.use(cors()); // Чтобы React мог достучаться до бэкенда
+app.use(cors({
+    origin: 'https://reliz-hotel.ru'
+}));
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.timeweb.ru',
     port: 465,
     secure: true,
     auth: {
-        user: process.env.SMTP_USER || 'info@reliz-hotel.ru', // Ваша почта
-        pass: process.env.SMTP_PASS || 'vash_parol'           // Пароль от почты
+        user: process.env.SMTP_USER || 'info@reliz-hotel.ru', // почта
+        pass: process.env.SMTP_PASS || 'kE9>3xn6NdfrNe'           // пароль от почты
     }
 });
 
@@ -22,7 +24,7 @@ app.post('/api/send', (req, res) => {
     
     const mailOptions = {
         from: process.env.SMTP_USER || 'info@reliz-hotel.ru',
-        to: process.env.RECEIVER_EMAIL || 'admin@reliz-hotel.ru', // Куда придет уведомление (можно ту же почту, или email)
+        to: process.env.RECEIVER_EMAIL || 'info@reliz-hotel.ru', // Куда придет уведомление
         subject: `Гостиница Релиз: Новая заявка от ${name}`,
         text: `Имя: ${name}\nТелефон: ${phone}\nEmail: ${email}\nПожелания: ${booking || 'Не указано'}`
     };

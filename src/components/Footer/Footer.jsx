@@ -4,7 +4,7 @@ import './Footer.css'
 
 const CONTACTS = [
   { icon: '📞', label: 'Телефон', value: '+7 (900) 644-50-01', href: 'tel:+79006445001' },
-  { icon: '📧', label: 'Email', value: 'reliz.hotel@gmail.com', href: 'mailto:reliz.hotel@gmail.com' },
+  { icon: '📧', label: 'Email', value: 'info@reliz-hotel.ru', href: 'mailto:info@reliz-hotel.ru' },
   { icon: '📍', label: 'Адрес', value: 'Абхазия, г. Пицунда', href: '#map' },
   { icon: '⏰', label: 'Заезд / Выезд', value: 'с 14:00 / до 12:00', href: null },
 ]
@@ -46,7 +46,7 @@ export default function Footer() {
               <button className="footer__oferta-button" onClick={() => setOfertaOpen(v => !v)} aria-label="Открыть публичную оферту">
                 Публичная оферта
               </button>
-              <a href="https://reliz-hotel.netlify.app/Политика_конфиденциальности.pdf" className="footer__privacy-policy-link">Политика конфиденциальности</a>
+              <a href="https://reliz-hotel.ru/Политика_конфиденциальности.pdf" className="footer__privacy-policy-link">Политика конфиденциальности</a>
             </div>
           </div>
         </div>

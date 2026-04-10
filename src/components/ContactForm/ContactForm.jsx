@@ -82,7 +82,7 @@ export default function ContactForm() {
 
     setStatus('loading')
     try {
-      const response = await fetch('http://localhost:3001/api/send', {
+      const response = await fetch('/api/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -91,7 +91,7 @@ export default function ContactForm() {
           email: fields.email,
           booking: fields.booking,
         }),
-      })
+      });
 
       if (!response.ok) {
         throw new Error(`Ошибка сервера: ${response.status}`)
