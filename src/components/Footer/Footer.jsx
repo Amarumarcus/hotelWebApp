@@ -11,7 +11,7 @@ const CONTACTS = [
 
 const SOCIAL = [
   { label: 'ВКонтакте', href: 'https://vk.ru/reliz.abkhazia' },
-  { label: 'Telegram', href: 'https://t.me' },
+  { label: 'Telegram', href: 'https://t.me/reliz_abkhazia' },
   { label: 'Instagram', href: 'https://www.instagram.com/reliz.abkhazia?igsh=MXh1MHdrZjUyb3pxcg==' },
   { label: 'WhatsApp', href: 'https://wa.me/+79006445001' },
 ]
